@@ -14,11 +14,9 @@ def get_data_frame(code: str = 'MRR_FR', detail: str = "dataonly", format: str =
     abc: Response = requests.get(request_url, params=params)
     jresp = abc.text
     df = pd.read_csv(StringIO(jresp),
-                     usecols=[8, 9],
-                     names=['date', code],
-                     skiprows=[0],
-                     dtype={code: float},
-                     parse_dates=[8])
-    df.set_index('data', inplace=True)
+                     usecols=['TIME_PERIOD','OBS_VALUE'],
+                     dtype={'OBS_VALUE': float},
+                     parse_dates=['TIME_PERIOD'])
+    df.set_index('TIME_PERIOD', inplace=True)
     df.index = df.index.to_period(freq='D')
     return df
