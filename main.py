@@ -1,5 +1,3 @@
-
-
 import pandas as pd
 import ecb
 
@@ -12,5 +10,5 @@ print(abc)
 abc = ecb.kr.get_marginal_rate()
 print(abc)
 
-abc = ecb.vvp.get_gdp_q()
+abc = ecb.gdp.get_gdp_q()
 print(abc)
