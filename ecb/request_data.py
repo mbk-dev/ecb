@@ -23,6 +23,7 @@ def get_data_frame(agency: str = 'FM', code: str = 'D.U2.EUR.4F.KR.MRR_FR.LEV', 
                      usecols=['TIME_PERIOD', 'OBS_VALUE'],
                      dtype={'OBS_VALUE': float},
                      parse_dates=['TIME_PERIOD'])
-    df.set_index('TIME_PERIOD', inplace=True)
+    df.rename(columns={df.columns[0]: "date"}, inplace=True)
+    df.set_index('date', inplace=True)
     df.index = df.index.to_period(freq=freq)
-    return df
+    return df.squeeze()
