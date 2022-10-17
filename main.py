@@ -12,3 +12,6 @@ print(abc)
 
 abc = ecb.gdp.get_gdp_q()
 print(abc)
+
+abc = ecb.hicp.get_hicp()
+print(abc)
