@@ -14,7 +14,8 @@ def get_deposit_rate() -> pd.Series:
     return s / 100
 
 
-def get_marginal_rate() -> pd.Series:
-    s = ecb.request_data.get_data_frame('FM', 'D.U2.EUR.4F.KR.MLFR.LEV')
+def get_marginal_rate(startperiod: str = '1900-01-01', endperiod: str = None) -> pd.Series:
+    s = ecb.request_data.get_data_frame('FM', 'D.U2.EUR.4F.KR.MLFR.LEV',
+                                        startperiod=startperiod, endperiod=endperiod)
     s.rename("marginal_rate", inplace=True)
     return s / 100
