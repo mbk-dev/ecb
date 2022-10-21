@@ -22,9 +22,7 @@ def get_deposit_rate() -> pd.Series:
     return s / 100
 
 
-def get_marginal_rate(
-    start_period: str = "1900-01-01", end_period: str = None
-) -> pd.Series:
+def get_marginal_rate(start_period: str = "1900-01-01", end_period: str = None) -> pd.Series:
     """
     Get ECB key rate on marginal lending facility monthly time seriesю
 
