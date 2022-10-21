@@ -1,4 +1,3 @@
-import pandas as pd
 import ecb
 
 abc = ecb.kr.get_main_rate()
@@ -15,5 +14,7 @@ print(abc)
 
 abc = ecb.hicp.get_hicp()
 print(abc)
+
+print(ecb.__version__)
 
 
