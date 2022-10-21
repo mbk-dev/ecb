@@ -16,5 +16,3 @@ abc = ecb.hicp.get_hicp()
 print(abc)
 
 print(ecb.__version__)
-
-
