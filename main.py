@@ -1,7 +1,6 @@
-import pandas as pd
 import ecb
 
-abc = ecb.kr.get_main_rate()
+abc = ecb.kr.get_refinancing_rate()
 print(abc)
 
 abc = ecb.kr.get_deposit_rate()
@@ -16,4 +15,4 @@ print(abc)
 abc = ecb.hicp.get_hicp()
 print(abc)
 
-
+print(ecb.__version__)
