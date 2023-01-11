@@ -21,8 +21,8 @@ def get_data_frame(
     params = {
         "detail": detail,
         "format": format,
-        "start_period": start_period,
-        "end_period": end_period,
+        "startPeriod": start_period,
+        "endPeriod": end_period,
     }
     try:
         abc: Response = requests.get(request_url, params=params)
