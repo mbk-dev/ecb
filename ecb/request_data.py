@@ -40,7 +40,7 @@ def get_data_frame(
         dtype={"OBS_VALUE": float},
         parse_dates=["TIME_PERIOD"],
     )
-    df.rename(columns={df.columns[0]: "date"}, inplace=True)
-    df.set_index("date", inplace=True)
+    df = df.rename(columns={df.columns[0]: "date"})
+    df = df.set_index("date")
     df.index = df.index.to_period(freq=freq)
     return df.squeeze()

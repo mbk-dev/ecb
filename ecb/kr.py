@@ -14,7 +14,7 @@ def get_refinancing_rate(start_date: pd.Timestamp = pd.Timestamp(1900, 1, 1),
         end_period = None
     s = ecb.request_data.get_data_frame("FM", "D.U2.EUR.4F.KR.MRR_FR.LEV",
                                         start_period=start_period, end_period=end_period)
-    s.rename("main_rate", inplace=True)
+    s = s.rename("main_rate")
     return s / 100
 
 
@@ -32,7 +32,7 @@ def get_deposit_rate(start_date: pd.Timestamp = pd.Timestamp(1900, 1, 1),
         end_period = None
     s = ecb.request_data.get_data_frame("FM", "D.U2.EUR.4F.KR.DFR.LEV",
                                         start_period=start_period, end_period=end_period)
-    s.rename("deposit_rate", inplace=True)
+    s = s.rename("deposit_rate")
     return s / 100
 
 
@@ -55,5 +55,5 @@ def get_marginal_rate(start_date: pd.Timestamp = pd.Timestamp(1900, 1, 1),
         start_period=start_period,
         end_period=end_period
     )
-    s.rename("marginal_rate", inplace=True)
+    s = s.rename("marginal_rate")
     return s / 100

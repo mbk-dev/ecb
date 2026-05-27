@@ -13,5 +13,5 @@ def get_hicp(start_period: str = "1900-01-01", end_period: str = None) -> pd.Ser
         start_period=start_period,
         end_period=end_period,
     )
-    s.rename("HICP", inplace=True)
+    s = s.rename("HICP")
     return s
