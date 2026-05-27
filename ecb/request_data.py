@@ -4,7 +4,7 @@ from io import StringIO
 
 from requests import Response
 
-URL_BASE = "https://sdw-wsrest.ecb.europa.eu/service/data/"
+URL_BASE = "https://data-api.ecb.europa.eu/service/data/"
 URL_END = "/"
 
 
