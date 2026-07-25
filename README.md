@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> **This repository is no longer maintained.** The client has moved to
+> [`mbk-dev/okama-macro`](https://github.com/mbk-dev/okama-macro) and is now
+> available under `okama_macro.sources.ecb`.
+
 [![Python](https://img.shields.io/badge/python-v3-brightgreen.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
